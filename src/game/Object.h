@@ -60,6 +60,7 @@ class WorldSession;
 class Creature;
 class Player;
 class Unit;
+class Group;
 class Map;
 class UpdateMask;
 class InstanceData;
@@ -350,6 +351,9 @@ class MANGOS_DLL_SPEC Object
 
         virtual bool HasQuest(uint32 /* quest_id */) const { return false; }
         virtual bool HasInvolvedQuest(uint32 /* quest_id */) const { return false; }
+
+        virtual void StartGroupLoot( Group* group, uint32 timer ) { }
+
     protected:
 
         Object ( );
@@ -364,6 +368,8 @@ class MANGOS_DLL_SPEC Object
         void BuildMovementUpdate(ByteBuffer * data, uint8 updateFlags) const;
         void BuildValuesUpdate(uint8 updatetype, ByteBuffer *data, UpdateMask *updateMask, Player *target ) const;
         void BuildUpdateDataForPlayer(Player* pl, UpdateDataMapType& update_players);
+
+        virtual void StopGroupLoot() { }
 
         uint16 m_objectType;
 
