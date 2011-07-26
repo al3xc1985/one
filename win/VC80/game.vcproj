@@ -681,6 +681,14 @@
 				RelativePath="..\..\src\game\CombatHandler.cpp"
 				>
 			</File>
+            <File
+			    RelativePath="..\..\src\game\CreatureLinkingMgr.cpp"
+                >
+            </File>
+            <File
+                RelativePath="..\..\src\game\CreatureLinkingMgr.h"
+                >
+            </File>
 			<File
 				RelativePath="..\..\src\game\DuelHandler.cpp"
 				>
